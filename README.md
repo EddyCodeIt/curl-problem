@@ -8,17 +8,19 @@ Alternatively we can create local repository on machine via command promt(git ba
 
    Upon examining differance between URL and locally stored html page of this website, I noticed that browser does not make a request to a server when opening localy stored files. URL of local file looks something like this: file:///C:/Users/eduar/Desktop/Data_Rep_Q/curl-problem/http-easy.html
    
-        Note: ">" symbol in stdout stream redirects stream to something what you specify, e.g., text file or some other types of files.
+        Note: > symbol in stdout stream redirects stream to something what you specify, e.g., text file or some other types of files.
 
 3) 
   3.1 Attempt to download duckduckgo.html using normal download method: curl https://www.duckduckgo.com > duckduckgo.html
-      Result: Status 301 Moved Permanently
+
+        Result: Status 301 Moved Permanently
       
   Problems is that by default curl doesn't redirect to HTTP location of duckduckgo.com which is located in Header.
-      Sulution: use -L after curl. -L option picks up HTTP Location and redirects to actual page location
+        Sulution: use -L after curl. -L option picks up HTTP Location and redirects to actual page location
   When compairing source code of downloaded file and source code of a page, I see no differance once again like in problem 2. Only differance is in URL.
   
   3.2 To obtain verbose mode details I use option -v. It displays transactions between client and server. In this case my machince is a client sending request to the server. 
+
   Full command: curl -v duckduckgo.com
   
   To output verbose mode details to a text file I tried a command: curl -v duckduckgo.com > verbus.txt. 
