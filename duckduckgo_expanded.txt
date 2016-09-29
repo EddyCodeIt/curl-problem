@@ -1,0 +1,111 @@
+* STATE: INIT => CONNECT handle 0x20081c48; line 1402 (connection #-5000)
+* Rebuilt URL to: duckduckgo.com/
+* Added connection 0. The cache now contains 1 members
+*   Trying 46.51.197.89...
+* STATE: CONNECT => WAITCONNECT handle 0x20081c48; line 1455 (connection #0)
+* Connected to duckduckgo.com (46.51.197.89) port 80 (#0)
+* STATE: WAITCONNECT => SENDPROTOCONNECT handle 0x20081c48; line 1562 (connection #0)
+* STATE: SENDPROTOCONNECT => DO handle 0x20081c48; line 1580 (connection #0)
+> GET / HTTP/1.1
+> Host: duckduckgo.com
+> User-Agent: curl/7.49.0
+> Accept: */*
+> 
+* STATE: DO => DO_DONE handle 0x20081c48; line 1659 (connection #0)
+* STATE: DO_DONE => WAITPERFORM handle 0x20081c48; line 1786 (connection #0)
+* STATE: WAITPERFORM => PERFORM handle 0x20081c48; line 1796 (connection #0)
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 301 Moved Permanently
+* Server nginx is not blacklisted
+< Server: nginx
+< Date: Thu, 29 Sep 2016 11:56:07 GMT
+< Content-Type: text/html
+< Content-Length: 178
+< Connection: keep-alive
+< Location: https://duckduckgo.com/
+< Expires: Fri, 29 Sep 2017 11:56:07 GMT
+< Cache-Control: max-age=31536000
+< 
+* Ignoring the response-body
+{ [178 bytes data]
+* multi_done
+* Connection #0 to host duckduckgo.com left intact
+* Issue another request to this URL: 'https://duckduckgo.com/'
+* STATE: PERFORM => CONNECT handle 0x20081c48; line 1931 (connection #-5000)
+* Added connection 1. The cache now contains 2 members
+*   Trying 46.51.197.89...
+* STATE: CONNECT => WAITCONNECT handle 0x20081c48; line 1455 (connection #1)
+* Connected to duckduckgo.com (46.51.197.89) port 443 (#1)
+* STATE: WAITCONNECT => SENDPROTOCONNECT handle 0x20081c48; line 1562 (connection #1)
+* ALPN, offering http/1.1
+* Cipher selection: ALL:!EXPORT:!EXPORT40:!EXPORT56:!aNULL:!LOW:!RC4:@STRENGTH
+* successfully set certificate verify locations:
+*   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+* TLSv1.2 (OUT), TLS header, Certificate Status (22):
+} [5 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client hello (1):
+} [512 bytes data]
+* STATE: SENDPROTOCONNECT => PROTOCONNECT handle 0x20081c48; line 1576 (connection #1)
+{ [5 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server hello (2):
+{ [120 bytes data]
+* NPN, negotiated HTTP1.1
+{ [5 bytes data]
+* TLSv1.2 (IN), TLS handshake, Certificate (11):
+{ [2517 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server key exchange (12):
+{ [333 bytes data]
+* TLSv1.2 (IN), TLS handshake, Server finished (14):
+{ [4 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Client key exchange (16):
+} [70 bytes data]
+* TLSv1.2 (OUT), TLS change cipher, Client hello (1):
+} [1 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Unknown (67):
+} [36 bytes data]
+* TLSv1.2 (OUT), TLS handshake, Finished (20):
+} [16 bytes data]
+* TLSv1.2 (IN), TLS change cipher, Client hello (1):
+{ [1 bytes data]
+* TLSv1.2 (IN), TLS handshake, Finished (20):
+{ [16 bytes data]
+* SSL connection using TLSv1.2 / ECDHE-RSA-AES128-GCM-SHA256
+* ALPN, server did not agree to a protocol
+* Server certificate:
+*  subject: C=US; ST=Pennsylvania; L=Paoli; O=Duck Duck Go, Inc.; CN=*.duckduckgo.com
+*  start date: May 25 00:00:00 2016 GMT
+*  expire date: Jul 26 12:00:00 2017 GMT
+*  subjectAltName: host "duckduckgo.com" matched cert's "duckduckgo.com"
+*  issuer: C=US; O=DigiCert Inc; CN=DigiCert SHA2 Secure Server CA
+*  SSL certificate verify ok.
+* STATE: PROTOCONNECT => DO handle 0x20081c48; line 1597 (connection #1)
+} [5 bytes data]
+> GET / HTTP/1.1
+> Host: duckduckgo.com
+> User-Agent: curl/7.49.0
+> Accept: */*
+> 
+* STATE: DO => DO_DONE handle 0x20081c48; line 1659 (connection #1)
+* STATE: DO_DONE => WAITPERFORM handle 0x20081c48; line 1786 (connection #1)
+* STATE: WAITPERFORM => PERFORM handle 0x20081c48; line 1796 (connection #1)
+{ [5 bytes data]
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 200 OK
+* Server nginx is not blacklisted
+< Server: nginx
+< Date: Thu, 29 Sep 2016 11:56:07 GMT
+< Content-Type: text/html; charset=UTF-8
+< Content-Length: 5009
+< Connection: keep-alive
+< ETag: "57ecd92a-1391"
+< Expires: Thu, 29 Sep 2016 11:56:06 GMT
+< Cache-Control: no-cache
+< Strict-Transport-Security: max-age=31536000
+< Accept-Ranges: bytes
+< 
+{ [5009 bytes data]
+* STATE: PERFORM => DONE handle 0x20081c48; line 1955 (connection #1)
+* multi_done
+* Connection #1 to host duckduckgo.com left intact
+* Expire cleared
