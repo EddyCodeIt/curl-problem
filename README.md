@@ -48,6 +48,7 @@ Alternatively we can create local repository on machine via command promt(git ba
 
    The problem is that curl reads this parameters as external/internal commands and have to be removed before sending a request. 
 
+
         Note: to save output to a file you can use: 'curl -o filename.txt URL' OR 'curl URL > filename.txt' to also output data to console
 
    4.2 To make a request to duckduckgo to search for 'computer science', modify URL as follows: 
