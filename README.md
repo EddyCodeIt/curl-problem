@@ -40,10 +40,9 @@ Alternatively we can create local repository on machine via command promt(git ba
     To adapt this URL to search for science I swapped GMIT for science in URL.
     In attempt to save a response, using curl and URL https://duckduckgo.com/?q=science&t=h_&ia=about, I received few errors: 
     
-    't' is not recognized as an internal or external command, operable program or batch file.
-    'ia' is not recognized as an internal or external command, operable program or batch file.
-    
-    
+        't' is not recognized as an internal or external command, operable program or batch file.
+        'ia' is not recognized as an internal or external command, operable program or batch file.
+        
     By looking at URL again I noticed this parameters: &t=h_&ia=about
         Info source for &t= : https://duck.co/help/privacy/t
     
