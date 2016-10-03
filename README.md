@@ -36,23 +36,23 @@ Alternatively we can create local repository on machine via command promt(git ba
         Information source: https://curl.haxx.se/mail/archive-2005-06/0090.html
         
 4) 
-    4.1 When searching for GMIT using duckduckgo search engine it produces following URL: https://duckduckgo.com/?q=GMIT&t=h_&ia=about
-    To adapt this URL to search for science I swapped GMIT for science in URL.
-    In attempt to save a response, using curl and URL https://duckduckgo.com/?q=science&t=h_&ia=about, I received few errors: 
-    
-    't' is not recognized as an internal or external command, operable program or batch file.
-    'ia' is not recognized as an internal or external command, operable program or batch file.
-    
-    
-    By looking at URL again I noticed this parameters: &t=h_&ia=about
-        Info source for &t= : https://duck.co/help/privacy/t
-    
-    The problem is that curl reads this parameters as external/internal commands and have to be removed before sending a request. 
-    
+   4.1 When searching for GMIT using duckduckgo search engine it produces following URL: https://duckduckgo.com/?q=GMIT&t=h_&ia=about
+   To adapt this URL to search for science I swapped GMIT for science in URL.
+   In attempt to save a response, using curl and URL https://duckduckgo.com/?q=science&t=h_&ia=about, I received few errors: 
+
+        't' is not recognized as an internal or external command, operable program or batch file.
+        'ia' is not recognized as an internal or external command, operable program or batch file.
+
+   By looking at URL again I noticed this parameters: &t=h_&ia=about
+   Info source for &t= : https://duck.co/help/privacy/t
+
+   The problem is that curl reads this parameters as external/internal commands and have to be removed before sending a request. 
+
         Note: to save output to a file you can use: 'curl -o filename.txt URL' OR 'curl URL > filename.txt' to also output data to console
+
+   4.2 To make a request to duckduckgo to search for 'computer science', modify URL as follows: 
         
-    4.2 To make a request to duckduckgo to search for 'computer science', modify URL as follows: 
-            https://duckduckgo.com/?q=science to https://duckduckgo.com/?q=computer+science
-            Note: how words are separated by + sign
-            
+        https://duckduckgo.com/?q=science to https://duckduckgo.com/?q=computer+science
+        Note: how words are separated by + sign
+
     
