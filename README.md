@@ -14,7 +14,7 @@ Alternatively we can create local repository on machine via command promt(git ba
   3.1 Attempt to download duckduckgo.html using normal download method: curl https://www.duckduckgo.com > duckduckgo.html
 
         Result: Status 301 Moved Permanently
-      
+        
   Problems is that by default curl doesn't redirect to HTTP location of duckduckgo.com which is located in Header.
         Sulution: use -L after curl. -L option picks up HTTP Location and redirects to actual page location
   When compairing source code of downloaded file and source code of a page, I see no differance once again like in problem 2. Only differance is in URL.
@@ -24,7 +24,9 @@ Alternatively we can create local repository on machine via command promt(git ba
   Full command: curl -v duckduckgo.com
   
   To output verbose mode details to a text file I tried a command: curl -v duckduckgo.com > verbus.txt. 
+
         Result: output of a text file showed me once again: Status 301 Moved Permanently
+  
   After some research on web I found few solutions to output verbose details to a text file:
         1. curl -v duckduckgo.com --stderr duckduckgo.txt 
            option --stderr is used for outputing diagnostical and debug messages in a text format, and then it can be saved to a file
@@ -32,3 +34,25 @@ Alternatively we can create local repository on machine via command promt(git ba
         3. curl ... > filename 2>&1. This will get both stdout and stderr into a same file
         
         Information source: https://curl.haxx.se/mail/archive-2005-06/0090.html
+        
+4) 
+    4.1 When searching for GMIT using duckduckgo search engine it produces following URL: https://duckduckgo.com/?q=GMIT&t=h_&ia=about
+    To adapt this URL to search for science I swapped GMIT for science in URL.
+    In attempt to save a response, using curl and URL https://duckduckgo.com/?q=science&t=h_&ia=about, I received few errors: 
+    
+    't' is not recognized as an internal or external command, operable program or batch file.
+    'ia' is not recognized as an internal or external command, operable program or batch file.
+    
+    
+    By looking at URL again I noticed this parameters: &t=h_&ia=about
+        Info source for &t= : https://duck.co/help/privacy/t
+    
+    The problem is that curl reads this parameters as external/internal commands and have to be removed before sending a request. 
+    
+        Note: to save output to a file you can use: 'curl -o filename.txt URL' OR 'curl URL > filename.txt' to also output data to console
+        
+    4.2 To make a request to duckduckgo to search for 'computer science', modify URL as follows: 
+            https://duckduckgo.com/?q=science to https://duckduckgo.com/?q=computer+science
+            Note: how words are separated by + sign
+            
+    
